@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Page</title>
+    <style>
+        /* Style for the slideshow container */
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Style for the slides */
+        .mySlides {
+            display: none;
+        }
+
+        /* Style for the navigation dots */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Slideshow Example</h2>
+
+    <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="mySlides">
+            
+          <img class="mySlides"  src="C:\Jects\Roxeno\image1.jpg" alt="Image 1">
+        </div>
+
+        <div class="mySlides">
+            <img src="C:\Jects\Roxeno\image2.jpg" alt="Image 2">
+        </div>
+
+        <div class="mySlides">
+            <img src="C:\Jects\Roxeno\image3.jpg" alt="Image 3">
+        </div>
+
+        <!-- Navigation dots -->
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for the slideshow
+        var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+    </script>
+
+</body>
+
+</html>

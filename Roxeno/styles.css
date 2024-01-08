@@ -1,0 +1,294 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Container styles */
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(132deg, #4CAF50, #45A049, #398837);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animation background */
+.background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #D7D4E4;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 12s ease-in forwards infinite;
+}
+
+.cube:nth-child(2n) {
+    border-color: #FFF;
+}
+
+.cube:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+}
+
+.cube:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+}
+
+.cube:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+}
+
+.cube:nth-child(5) {
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+}
+
+.cube:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+nav {
+    color: #FFF;
+    float: right;
+    margin: 30px 30px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    float: left;
+    transition: .3s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #EFEEF5;
+    transition: .5;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 16px;
+}
+
+nav ul li:hover a {
+    text-decoration: none;
+    color: #1bc568;
+}
+
+nav ul li:hover {
+    height: 45px;
+    padding-top: 30px;
+    margin-top: -30px;
+    background: #EFEEF5;
+    text-decoration: none;
+    transform: skew(15deg);
+}
+
+nav {
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Logo */
+.logo {
+    width: 35px;
+    height: 35px;
+    background: #EFEEF5;
+    margin: 40px 50px 40px 20px;
+    float: left;
+    transform: rotate(-30deg);
+}
+
+.logo span {
+    color: #591BC5;
+    font-size: 2em;
+    line-height: 1.4;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+/* Header content & title & button */
+.header-content-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    padding-top: -100; /* Add a padding value to bring the content down from the top */
+}
+
+.header-content {
+    text-align: center; /* Center the text horizontally */
+    margin-top: 90px;
+}
+
+.header-content h1,
+.header-content h2,
+.header-content p {
+    line-height: 1.6; /* Adjust the line height for better spacing */
+}
+
+.header-content h1 {
+    font-size: 3.5em; /* Adjust the font size as needed */
+    color: #FFF; /* Set the color to white */
+}
+
+.header-content h2,
+.header-content p {
+    font-size: 2em; /* Adjust the font size as needed */
+    color: #FFF; /* Set the color to white */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #FFF;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+/* Animation for cube */
+@keyframes cube {
+    from {
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+    to {
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+/* Slideshow styles */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* Navigation dots styles */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Active dot style */
+.active {
+    background-color: #717171;
+}
+
+/* Service details styles */
+.service-details {
+    text-align: center;
+    color: #FFF;
+    padding: 20px;
+    margin-top: 50px; /* Adjust the margin as needed */
+}
+
+.service-details h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.service-details p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.service-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-details li {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}

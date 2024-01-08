@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <title>Roxeno Enterprises - About Us</title>
+    <link rel="icon" href="C:\Jects\Roxeno\roxicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="C:\Jects\Roxeno\roxicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #45A049;
+            padding: 10px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            max-height: 50px;
+            margin-left: 10px; /* Adjusted margin */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #FFF;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        nav ul li:hover a {
+            text-decoration: none;
+            color: #1bc568;
+        }
+
+        .about-section {
+            height: 70vh;
+            text-align: center;
+            
+            position: relative;
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .about-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("C:/Jects/Roxeno/story.jpg");
+            background-size: cover;
+            background-position: center center;
+            z-index: -1; /* Place the pseudo-element behind the content */
+             transform: scale(1.1); /* Adjust the scale factor as needed */
+             transition: transform 0.3s ease; /* Add a smooth transition effect */
+
+        }
+
+        .about-section:hover:before {
+    transform: scale(1); /* Return to the original scale on hover */
+}
+        
+        .about-content {
+            z-index: 1;
+            margin: 80px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -30px;
+        }
+
+        .about-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.8;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-section {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .testimonial {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .testimonial-card {
+            max-width: 400px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+
+    
+        
+
+
+
+        /* Footer styles */
+        .footer {
+            background-color: #0a200b;
+            color: #FFF;
+            padding: 5px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            
+        }
+        
+
+        .social-icons {
+            display: flex;
+        }
+
+        .social-icons i {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #FFF;
+            cursor: pointer;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #FFF;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="C:\Jects\Roxeno\index.html">
+            <img src="C:\Jects\Roxeno\logo1.jpg" alt="Logo" class="logo">
+        </a>
+                <nav>
+            <ul>
+                <li><a href="C:\Jects\Roxeno\index.html">Home</a></li>
+                <li><a href="C:\Jects\Roxeno\services.html">Services</a></li>
+                <li><a href="C:\Jects\Roxeno\about.html">About Us</a></li>
+                <li><a href="C:\Jects\Roxeno\contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <div class="about-content">
+            <h2>Our Story</h2>
+            <p>Roxeno Enterprises is a leading general supplies company based in Kenya. With a commitment to excellence,
+                we provide a wide range of products including foodstuffs, non-foodstuff, washing materials, cutlery,
+                stationery, and more. Our mission is to meet the diverse needs of our clients by delivering
+                top-quality supplies.</p>
+            <p>We take pride in serving some of Kenya's top institutions, ensuring that they receive reliable and
+                cost-effective solutions for their everyday requirements. Our dedicated team works tirelessly to
+                maintain the highest standards of service and reliability.</p>
+        </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <div class="testimonial-section">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <div class="testimonial-card">
+                <img src="saf.jpg" alt="Client 1">
+                <p>"Roxeno Enterprises has been our trusted supplier for years. Their commitment to quality and
+                    reliability is unmatched. Highly recommended!"</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="ku.jpg" alt="Client 2">
+                <p>"The team at Roxeno goes above and beyond to meet our unique requirements. Their diverse product
+                    range and prompt service make them a valuable partner."</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="mpesa.jpg" alt="Client 3">
+                <p>"We rely on Roxeno for all our supply needs. Their professionalism and attention to detail set them
+                    apart. Truly exceptional service!"</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2023 Your Executive Supplying Service. All rights reserved.</p>
+    </div>
+</body>
+
+
+</html>

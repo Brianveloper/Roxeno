@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-g6zNvISg9rTFO8Kq6PIdjSn9BHjb0Je2O9K1LcKrFJQlSk7yF9QEtnZ0fWZAIfU" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            padding: 30px;
+        }
+
+        .navbar {
+            float: right;
+            position: relative;
+            bottom: 20px;
+            padding: 10px 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin-right: 20px;
+            padding: 0%;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #FFF;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            bottom: 30px;
+            max-width: 100%;
+            height: 75vh; /* Adjust the height to 75% of the viewport height */
+            margin: auto;
+            margin: 20px 0;
+            overflow: hidden; /* Add overflow to hide extra content */
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .fade {
+            animation: fade 5s infinite;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Service Details Section */
+        .service-details {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .service-details h2 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        .service-details p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .service-details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-details ul li {
+            font-size: 1.1em;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #333;
+            color: #FFF;
+            padding: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-icons i {
+            font-size: 20px;
+            margin: 0 10px;
+            color: #FFF;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #FFF;
+        }
+    </style>
+    <title>Roxeno Enterprises - Services</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="C:\Jects\Roxeno\index.html">Home</a></li>
+                <li><a href="C:\Jects\Roxeno\services.html">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="slideshow-container">
+        <img class="mySlides" src="C:\Jects\Roxeno\slide2.jpg">
+        <img class="mySlides" src="C:\Jects\Roxeno\home2.jpeg">
+        <img class="mySlides" src="C:\Jects\Roxeno\slide3.jpg">
+    </div>
+
+    <!-- Service Details Section -->
+    <div class="service-details">
+        <h2>Our Services</h2>
+        <p>Explore our comprehensive range of executive supplying services tailored to meet the unique needs of executive institutions.</p>
+        <ul>
+            <li>Executive Search</li>
+            <li>Leadership Development</li>
+            <li>Succession Planning</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+        <p>&copy; 2023 Roxeno Enterprises</p>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change slide every 5 seconds
+        }
+    </script>
+
+</body>
+
+</html>

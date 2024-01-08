@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <title>Roxeno Services</title>
+    <link rel="icon" href="C:\Jects\Roxeno\roxicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="C:\Jects\Roxeno\roxicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+            background:#ccc;
+        }
+    
+        header {
+            background-color: #45A049;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+        .logo {
+            max-height: 50px;
+            margin-left: 10px;
+        }
+    
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+    
+        nav ul li {
+            margin-left: 20px;
+        }
+    
+        nav a {
+            text-decoration: none;
+            color: #FFF;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 13px;
+        }
+    
+        nav ul li:hover a {
+            text-decoration: none;
+            color: #1bc568;
+        }
+    
+        .slideshow {
+            position: relative;
+            height: 75vh;
+            overflow: hidden;
+            border-radius:0 0 15px 15px ; /* Add rounded corners for each category container */
+
+        }
+    
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: fadeInOut 8s infinite;
+        }
+    
+        .slide:first-child {
+            display: block;
+        }
+        
+
+        .slide {
+    /* Other styles for the slide... */
+    transition: transform 0.s ease; /* Add a smooth transition effect */
+}
+
+.slide:hover {
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+}
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            20%, 80% {
+                opacity: 1;
+            }
+        }
+    
+        .service-details {
+               text-align: center;
+               margin: 5px;
+               padding: 20px; /* Add padding for each category container */
+               border-radius: 15px 15px 0 0; /* Add rounded corners for each category container */
+               background: #98FB98;
+               background-size: cover;
+               background-position: center;
+               background-repeat: no-repeat;
+               overflow: hidden;
+
+            }
+    
+        .service-details h2,
+        .service-details p,
+        .service-details ul li,
+        .service-details .category h3,
+        .service-details .category p {
+            position: relative;
+            z-index: 1;
+            color:#050505;
+            font-weight:bold;
+        }
+    
+        .service-details ul {
+            list-style: none;
+            padding: 0;
+            border-radius: 15px;
+            height: 50vh;
+        }
+    
+        .service-details ul li {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            
+        }
+    
+        /* Styles for new categories */
+        .service-details .category {
+            margin-top: 30px;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;      
+            height: 50vh;
+
+            
+              
+        }
+
+        .service-details {
+    /* Other styles for the slide... */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.service-details :hover {
+    transform: scale(1.015); /* Adjust the scale factor as needed */
+}
+    
+        .service-details .category,
+        .service-details .category ul li {
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            box-sizing: border-box ;
+            position: relative;
+            overflow: hidden;
+            height: 50vh;
+            
+            
+        }
+    
+        .service-details .category::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(0, 0, 0, 0.6));
+            z-index: -1;
+            
+        }
+
+        .service-details h2{
+            color: black;
+            font-size: 1.5em;
+        }
+    
+        .service-details .category h3 {
+            color: #45A049;
+            font-size: 1.5em;
+        }
+    
+        .service-details .category p {
+            text-align: center;
+            font-size: 1.2em;
+
+        }
+    
+        /* Image styling */
+        .service-details .category {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    
+        .service-details .technology-category {
+            background-image: url("C:/Jects/Roxeno/technology.jpg");
+            
+        }
+    
+        .service-details .furniture-category {
+            background-image: url("C:/Jects/Roxeno/workspace.jpg");
+        }
+    
+        .service-details .educational-category {
+            background-image: url("C:/Jects/Roxeno/education.jpg");
+        }
+    
+        .service-details .apparel-category {
+            background-image: url("C:/Jects/Roxeno/apparel.jpg");
+        }
+    
+        .service-details .security-category {
+            background-image: url("C:/Jects/Roxeno/security.jpg");
+        }
+    
+        .service-details .food-category {
+            background-image: url("C:/Jects/Roxeno/food.jpg");
+        }
+    
+        .service-details .safety-category {
+            background-image: url("C:/Jects/Roxeno/safety.jpg");
+        }
+
+        .service-details .facility-category {
+            background-image: url("C:/Jects/Roxeno/cleaning.jpg");
+        }
+
+        .service-details .gifts-category {
+            background-image: url("C:Jects/Roxeno/gifts.jpg");
+        }
+
+        .technology-category {
+            height: 50vh;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(0, 0, 0, 0.6)), url('path/to/technology-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.technology-category h3,
+.technology-category p,
+.technology-category ul li {
+    position: relative;
+    z-index: 1;
+    color: #0a200b;
+    font-weight: bold;
+}
+
+.technology-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.technology-category ul li {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+
+
+        /* Styles for Furniture and Workspace Solutions Category */
+.furniture-category {
+    height: 50vh;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(0, 0, 0, 0.6)), url("C:/Jects/Roxeno/technology.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.furniture-category h3,
+.furniture-category p,
+.furniture-category ul li {
+    position: relative;
+    z-index: 1;
+    color: #0a200b;
+    font-weight: bold;
+}
+
+.furniture-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.furniture-category ul li {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Styles for Educational Materials Category */
+.educational-category {
+    height: 50vh;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(0, 0, 0, 0.6)), url('path/to/educational-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.educational-category h3,
+.educational-category p,
+.educational-category ul li {
+    position: relative;
+    z-index: 1;
+    color: #0a200b;
+    font-weight: bold;
+}
+
+.educational-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.educational-category ul li {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+
+
+/* Styles for Corporate Apparel and Merchandise Category */
+.apparel-category {
+    height: 50vh;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(0, 0, 0, 0.6)), url('path/to/apparel-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.apparel-category h3
+.apparel-category p,
+.apparel-category ul li {
+    position: relative;
+    z-index: 1;
+    color: #0a200b;
+    font-weight: bold;
+}
+
+.apparel-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.apparel-category ul li {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* Styles for Food and Beverage Supplies Category */
+.food-category {
+    text-align: center;    
+    height: 50vh;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(0, 0, 0, 0.6)), url('path/to/food-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.food-category h3,
+.food-category p,
+.food-category ul li {
+    position: relative;
+    z-index: 1;
+    color: #0a200b;
+    font-weight: bold;
+}
+
+.food-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.food-category ul li {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Styles for Security and Surveillance Systems Category */
+.security-category {
+    text-align: center;
+    height: 50vh;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(0, 0, 0, 0.6)), url('path/to/security-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.security-category h3,
+.security-category p,
+.security-category ul li {
+    position: relative;
+    z-index: 1;
+    color: #0a200b;
+    font-weight: bold;
+}
+
+.security-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.security-category ul li {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+
+
+    /* Styles for Safety and Compliance Products Category */
+.safety-category {
+    text-align: center;
+    margin: 10px;
+    height:50vh;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(0, 0, 0, 0.6)), url('path/to/safety-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.safety-category h3,
+.safety-category p,
+.safety-category ul li {
+    position: relative;
+    z-index: 1;
+    color: #0a200b;
+    font-weight: bold;
+}
+
+.safety-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.safety-category ul li {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+
+
+/* Styles for Facility Management and Maintenance Supplies Category */
+.facility-category {
+    text-align: center;
+    height: 50vh;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(0, 0, 0, 0.6)), url('path/to/facility-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.facility-category h3,
+.facility-category p,
+.facility-category ul li {
+    position: relative;
+    z-index: 1;
+    color: #0a200b;
+    font-weight: bold;
+}
+
+.facility-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.facility-category ul li {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+
+/* Styles for Customized Corporate Gifts Category */
+.gifts-category {
+    text-align: center;
+    height:50vh;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(0, 0, 0, 0.6)), url('path/to/gifts-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.gifts-category h3,
+.gifts-category p,
+.gifts-category ul li {
+    position: relative;
+    z-index: 1;
+    color: #0a200b;
+    font-weight: bold;
+}
+
+.gifts-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.gifts-category ul li {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+
+    
+footer {
+    background-color: #0a200b;
+            color: #FFF;
+            padding: 5px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+    
+        social-icons {
+            display: flex;
+        }
+    
+        social-icons i {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #050505;
+            cursor: pointer;
+        }
+    
+        .social-icons a {
+            text-decoration: none;
+            color: #0c0c0c;
+        }
+    </style>
+    
+    
+</head>
+
+<body>
+
+    <header>
+        <a href="C:\Jects\Roxeno\index.html">
+            <img src="C:\Jects\Roxeno\logo1.jpg" alt="Logo" class="logo">
+        </a>       
+         <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="slideshow">
+        <div class="slide" style="background-image: url('slide1.jpg');"></div>
+        <div class="slide" style="background-image: url('slide2.jpg');"></div>
+        <div class="slide" style="background-image: url('slide3.jpg');"></div>
+        <div class="slide" style="background-image: url('slide4.jpg');"></div>
+        <div class="slide" style="background-image: url('slide5.jpg');"></div>
+        <div class="slide" style="background-image: url('slide6.jpg');"></div>
+        <div class="slide" style="background-image: url('slide7.jpg');"></div>
+        <div class="slide" style="background-image: url('slide8.jpg');"></div>
+        <div class="slide" style="background-image: url('slide9.jpg');"></div>
+        <div class="slide" style="background-image: url('slide10.jpg');"></div>
+        <div class="slide" style="background-image: url('slide11.jpg');"></div>
+        <div class="slide" style="background-image: url('slide12.jpg');"></div>
+
+    </div>
+
+    <div class="service-details">
+        <h2>Our Services</h2>
+
+        <!-- Office Supplies Category -->
+        
+        <!-- Technology and IT Products Category -->
+        <div class="technology-category">
+            <h3>Technology and IT Products</h3>
+    
+                <p>Boost your team's productivity with the latest computers and laptops, ensuring a seamless and efficient workflow.</p>
+
+                
+        </div>
+
+        <!-- Furniture and Workspace Solutions Category -->
+        <div class="furniture-category">
+            <h3>Furniture and Workspace Solutions</h3>
+            <p>Create a comfortable and collaborative work environment with our versatile furniture and workspace solutions.</p>
+           
+        </div>
+
+        <!-- Educational Materials Category -->
+        <div class="educational-category">
+            <h3>Educational Materials</h3>
+            <p>Enhance the learning experience with our comprehensive range of educational materials for schools and institutions.</p>
+            
+        </div>
+
+        <!-- Corporate Apparel and Merchandise Category -->
+        <div class="apparel-category">
+            <h3>Corporate Apparel and Merchandise</h3>
+            <p>Enhance your brand presence and team unity with our customized corporate apparel and merchandise.</p>
+         
+        </div>
+
+        <!-- Security and Surveillance Systems Category -->
+        <div class="security-category">
+            <h3>Security and Surveillance Systems</h3>
+            <p>Ensure a secure and protected environment with our advanced security and surveillance solutions.</p>
+          
+        </div>
+
+     
+
+        <!-- Food and Beverage Supplies Category -->
+        <div class="food-category">
+            <h3>Food and Beverage Supplies</h3>
+            <p>Indulge in a culinary experience with our curated food and beverage supplies for cafeterias and hotels.</p>
+            
+        </div>
+
+        <!-- Safety and Compliance Products Category -->
+        <div class="safety-category">
+            <h3>Safety and Compliance Products</h3>
+            <p>Prioritize safety and compliance with our comprehensive range of products and services.</p>
+           
+        </div>
+
+        <!-- Facility Management and Maintenance Supplies Category -->
+        <div class="facility-category">
+            <h3>Facility Management and Maintenance Supplies</h3>
+            <p>Maintain a seamless and well-functioning workplace with our facility management and maintenance solutions.</p>
+            
+        </div>
+
+        <!-- Customized Corporate Gifts Category -->
+        <div class="gifts-category">
+            <h3>Customized Corporate Gifts</h3>
+            <p>Celebrate special occasions and express appreciation with our personalized executive gifts and custom awards.</p>
+            
+    </div>
+
+    <div class="footer">
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/chv_gie/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2023 Your Executive Supplying Service. All rights reserved.</p>
+    </div>
+
+    <script>
+        // JavaScript for automatic slideshow
+        var slides = document.querySelectorAll('.slide');
+        var currentSlide = 0;
+
+        function showSlide() {
+            slides.forEach(function (slide) {
+                slide.style.display = 'none';
+            });
+
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].style.display = 'block';
+        }
+
+        setInterval(showSlide, 8000);
+    </script>
+
+</body>
+
+</html>
